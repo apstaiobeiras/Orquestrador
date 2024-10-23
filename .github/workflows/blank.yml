@@ -17,7 +17,7 @@ jobs:
     - name: Access cloned repository content
       run: |
         cd b
-        echo Teste > readme.md
+        bash baixar-bases.sh
         git config --global user.email "apstaiobeiras@gmail.com"
         git config --global user.name "Sameera Dissanayaka"
         git add .
