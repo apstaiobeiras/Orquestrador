@@ -36,9 +36,9 @@ jobs:
         git config --global user.email "apstaiobeiras@gmail.com"
         git config --global user.name "Bot"
         git add .
-        git commit -m "Atualização $(date +'%d/%m/%Y')"
-        git remote set-url origin https://x-access-token:${{ secrets.PAT }}@github.com/apstaiobeiras/b.git
-        git push
+        git commit -m "Atualização $(date +'%d/%m/%Y')" || true
+        git remote set-url origin https://x-access-token:${{ secrets.PAT }}@github.com/apstaiobeiras/b.git || true
+        git push || true
 
     - name: Publicar
       run: |
