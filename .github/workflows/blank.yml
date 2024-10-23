@@ -1,0 +1,30 @@
+name: Teste
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-file:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Clone Repository B
+      uses: GuillaumeFalourd/clone-github-repo-action@v2.3
+      with:
+        depth: 1
+        branch: 'main'
+        owner: 'apstaiobeiras'
+        repository: 'b'
+
+    - name: Access cloned repository content
+      run: |
+        cd b
+        echo Teste > readme.md
+        git config --global user.email "devopssameera@gmail.com"
+        git config --global user.name "Sameera Dissanayaka"
+        git add .
+        git commit -m "Update sam.md"
+        git remote set-url origin https://x-access-token:${{ secrets.PAT }}@github.com/iam-sameera/b.git
+        git push
