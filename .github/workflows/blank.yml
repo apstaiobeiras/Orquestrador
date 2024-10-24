@@ -25,6 +25,7 @@ jobs:
         branch: 'main'
         owner: 'apstaiobeiras'
         repository: 'B'
+        access-token: ${{ secrets.PAT }}
 
     - name: Salvar bases e gerar os scripts 
       run: |
@@ -35,6 +36,7 @@ jobs:
         lua5.4 solicitacoes-agendadas.lua
         lua5.4 solicitacoes-excluidas.lua
         lua5.4 visita-domiciliar-acs.lua
+        cd ..
         ls
         git config --global user.email "apstaiobeiras@gmail.com"
         git config --global user.name "Bot"
@@ -50,7 +52,7 @@ jobs:
         git config --global user.name "Bot"
         git add .
         git commit -m "Atualização $(date +'%d/%m/%Y')"
-        git remote set-url origin https://x-access-token:${{ secrets.PAT }}@github.com/apstaiobeiras/b.git
+        git remote set-url origin https://x-access-token:${{ secrets.PAT }}@github.com/apstaiobeiras/apstaiobeiras.github.io.git
         git push
 
 
