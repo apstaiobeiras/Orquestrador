@@ -1,8 +1,7 @@
 name: Teste
 on:
-  push:
-    branches:
-      - main
+  schedule:
+    - cron: "9 40 * * 1-5"
 jobs:
   update-file:
     runs-on: ubuntu-latest
