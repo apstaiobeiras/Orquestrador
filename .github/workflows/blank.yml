@@ -31,6 +31,10 @@ jobs:
         cd B
         #bash baixar-bases.sh
         cd relatorios
+        lua5.4 producao-diaria.lua
+        lua5.4 solicitacoes-agendadas.lua
+        lua5.4 solicitacoes-excluidas.lua
+        lua5.4 visita-domiciliar-acs.lua
         ls
         git config --global user.email "apstaiobeiras@gmail.com"
         git config --global user.name "Bot"
