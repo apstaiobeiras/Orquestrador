@@ -24,15 +24,13 @@ jobs:
         depth: 1
         branch: 'main'
         owner: 'apstaiobeiras'
-        repository: 'b'
+        repository: 'B'
 
     - name: Salvar bases e gerar os scripts 
       run: |
-        cd b
+        cd B
         #bash baixar-bases.sh
-        cd relatorios
-        lua5.4 *.lua
-        cd ..
+        (cd relatorios; lua5.4 *.lua)
         git config --global user.email "apstaiobeiras@gmail.com"
         git config --global user.name "Bot"
         git add .
