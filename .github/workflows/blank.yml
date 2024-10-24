@@ -30,7 +30,7 @@ jobs:
       run: |
         cd B
         #bash baixar-bases.sh
-        (cd relatorios; lua5.4 *.lua)
+        ls
         git config --global user.email "apstaiobeiras@gmail.com"
         git config --global user.name "Bot"
         git add .
