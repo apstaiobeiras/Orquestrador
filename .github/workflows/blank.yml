@@ -36,6 +36,7 @@ jobs:
         lua5.4 solicitacoes-excluidas.lua
         lua5.4 visita-domiciliar-acs.lua
         lua5.4 vitamina-a-100-mil.lua
+        lua5.4 vacina-triplice.lua
         cd ..
         ls
         git config --global user.email "apstaiobeiras@gmail.com"
