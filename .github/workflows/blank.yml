@@ -42,6 +42,7 @@ jobs:
         lua5.4 pacientes-arbovirose.lua
         lua5.4 validacao-cadastros.lua
         lua5.4 completude-questionario-esus.lua
+        lua5.4 farmacia.lua
         cd ..
         ls
         git config --global user.email "apstaiobeiras@gmail.com"
