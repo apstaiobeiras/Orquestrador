@@ -43,6 +43,7 @@ jobs:
         lua5.4 validacao-cadastros.lua
         lua5.4 completude-questionario-esus.lua
         lua5.4 farmacia.lua
+        lua5.4 quantificar-cadastros-problematicos.lua
         cd ..
         ls
         git config --global user.email "apstaiobeiras@gmail.com"
