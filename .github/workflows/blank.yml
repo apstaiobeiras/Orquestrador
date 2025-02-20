@@ -45,6 +45,7 @@ jobs:
         lua5.4 farmacia.lua
         lua5.4 quantificar-cadastros-problematicos.lua
         lua5.4 ace-ciclos.lua
+        lua5.4 extrai-esfs.lua
         cd ..
         ls
         git config --global user.email "apstaiobeiras@gmail.com"
